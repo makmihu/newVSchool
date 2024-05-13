@@ -1,0 +1,147 @@
+// let and const) -------------------------------------------------------
+    /*Replace all the `var`s with `let` and `const`. Alter the code however necessary to make sure this continues to work (so the pet's name **isn't** `"John"`, but instead `"spot"` is returned). You only need to delete `var` and insert `let` and `const`
+
+    John is the pet owner, and his name should be stored differently than the other names. */
+const name = "John"
+let age = 101
+
+function runForLoop(pets) {
+    let petObjects = []
+    for (var i = 0; i < pets.length; i++) {
+        let pet = { type: pets[i] }
+        let name;
+        if (pets[i] === "cat") {
+            name = "fluffy"
+        } else {
+            name = "spot"
+        }
+        console.log("pet name: ", name)
+        pet.name = name
+        petObjects.push(pet)
+    }
+    console.log("man name: ", name)
+    return petObjects
+}
+
+// runForLoop(["cat", "dog"])
+//Arrow Functions) -----------------------------------------------------
+    // 1) -------------------------------------------------------
+        /**Re-write this `.map()` using an arrow function:
+
+        Be aware that if JavaScript sees a `{` directly after the `=>` it will think it's starting a function, and not starting an object, so the `:` will be an unexpected symbol. */
+    const carrots = ["bright orange", "ripe", "rotten"]
+
+    function mapVegetables(arr) {
+        return arr.map(carrot => ({ type: "carrot" , name: carrot }))
+    }
+    // console.log(mapVegetables(carrots))
+    
+    // 2) -------------------------------------------------------
+        // Re-write this .filter()’s callback function using an arrow function:
+    const people = [
+        {
+            name: "Princess Peach",
+            friendly: false
+        },
+        {
+            name: "Luigi",
+            friendly: true
+        },
+        {
+            name: "Mario",
+            friendly: true
+        },
+        {
+            name: "Bowser",
+            friendly: false
+        }
+    ]
+    
+    function filterForFriendly(arr) {
+        return arr.filter(person => person.friendly)
+    }   
+    // console.log(filterForFriendly(people))
+    
+    // 3) -------------------------------------------------------
+        //Re-write the following functions to be arrow functions: 
+    const doMathSum = ((a, b) => a + b)
+        // console.log(doMathSum(3, 5)) 
+    var produceProduct = ((a, b) => a * b)
+        // console.log(produceProduct(4, 8))
+
+    // 4) -------------------------------------------------------
+        // Write a printString function that takes firstName, lastName, and age as parameters and returns a string like the following:
+            // Hi Kat Stark, how does it feel to be 40?
+        // firstName should default to "Jane"
+        // lastName should default to "Doe"
+        // age should default to 100
+    function printString(firstName = "Jane", lastName = "Doe", age = 100){
+        return `Hi ${firstName} ${lastName}, how does it feel to be ${age}`
+    } 
+    // console.log(printString("Kat", "Stark", 40))
+
+    // 5) -------------------------------------------------------
+        // Use the shorthand syntax to make the following filter take up one line. Copy and paste the array to test it.
+    const animals = [
+        {
+            type: "dog",
+            name: "theodore"
+        },
+        {
+            type: "cat",
+            name: "whiskers"
+        },
+        {
+            type: "pig",
+            name: "piglette"
+        },
+        {
+            type: "dog",
+            name: "sparky"
+        }
+     ];
+     
+    function filterForDogs(arr){return arr.filter(animal => animal.type === "dog")}
+     
+// console.log(filterForDogs(animals))
+
+//Template Literals) -----------------------------------------------------
+    /*Using template literals, write a function that takes location and name parameters and outputs a message formatted like this:*/
+        // Hi Janice!
+
+        // Welcome to Hawaii.
+
+        // I hope you enjoy your stay. Please ask the president of Hawaii if you need anything.
+function templateLiterals(location, name){
+    return `Hi ${name}! 
+    \n
+    \nWelcome to ${location}.
+    \n
+    \nI hope you are enjoying your stay. Please ask the president of ${location} if you need anything.`
+}
+// console.log(templateLiterals("Hawaii", "Janice"))
+
+
+//Templating) --------------------------------------------------------------
+    /**This special syntax is called template literals, string templates, and other similar things. 
+
+    They utilize the "back tick." This symbol -> `. It's just left of the "1" on your keyboard. We put our entire string inside two back ticks, and we use a dollar sign and curly brackets to insert JavaScript variables and expressions into.
+
+    We used to concatenate strings like so: */
+    
+        // let n = "Jacob";
+        // let age = 20;
+        // console.log("hello, my name is " + n+ " and I am " + age + " years old.");
+
+
+    //but now we can use the following syntax:
+       
+        // console.log(`hello, my name is ${n} and I am ${age} years old.`);
+
+
+    /**This is easier to read and write, we can easily identify where the JavaScript variables are, and it takes up less room. All those quotes and "+"s in the old way are way to easy to mess up. Start using the ES6 way!
+     You can also insert JavaScript expressions into the curly brackets. */
+        
+        // console.log(`hello, my name is ${n}. Next year, I will be ${age + 1} years old`);
+
+

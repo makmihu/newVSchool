@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css"/>
+        <title>Simple Calculator</title>
+    </head>
+    <body id="grid-container">
+        <header>Simple Calculator</header>
+
+        <div id="add" class="operation">
+            <form name="addForm">
+                <input type="number" name="add1" required/>
+                <p> + </p>
+                <input type="number" name="add2" required/>
+                <p> = </p>
+                <div id="add-answer" class="solution" name="addAnswer">?</div>
+                <button>Submit</button>
+            </form>
+        </div>
+
+        <div id="subtract" class="operation">
+            <form name="subtractForm">
+                <input type="number" name="sub1" required/>
+                <p> - </p>
+                <input type="number" name="sub2" required/>
+                <p> = </p>
+                <div id="subtract-answer" class="solution">?</div>
+                <button>Submit</button>
+            </form>
+        </div>
+
+        <div id="multiply" class="operation">
+            <form name="multiplyForm">
+                <input type="number" name="mul1" required/>
+                <p> x </p>
+                <input type="number" name="mul2" required/>
+                <p> = </p>
+                <div id="multiply-answer" class="solution">?</div>
+                <button>Submit</button>
+            </form>
+        </div>
+
+
+        <script src="index.js"></script>
+    </body>
+</html>

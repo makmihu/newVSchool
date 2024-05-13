@@ -1,0 +1,66 @@
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(193, 165, 153);
+}
+form {
+  border: 2px solid black;
+  margin: 30px 5em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px 3em;
+  background-color:rgb(56, 33, 24);
+  border-radius: 15px; 
+}
+.formItem{
+  margin: 10px 1em;
+  font-size: 30px;
+  border-radius: 15px;
+  padding: 5px;
+  background-color: rgba(187, 225, 237, 0.83);
+  border-radius: 15px;
+}
+textarea {
+  grid-column: 1 / -1;
+}
+button {
+  grid-column: 1 / -1;
+  margin: 5px 10em;
+  font-size: 25px;
+  border-radius: 20px;
+  padding: 3px;
+}
+
+.badge {
+  border: 2px solid black;
+  margin: 30px 5em;
+  padding: 10px 3em;
+  background-color:rgb(56, 33, 24);
+  border-radius: 15px; 
+  color: rgba(187, 225, 237, 0.83);
+  
+}
+.badgeHeader {
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(187, 225, 237, 0.83);
+  font-size: 40px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 30px;
+}
+.left {
+  margin: 10px 50px;
+}
+.right {
+  margin: 10px 50px; 
+  text-align: right;
+}
+.commentBox {
+  grid-column: 1/-1;
+  margin: 10px 50px;
+  border: 1px solid rgba(187, 225, 237, 0.83);
+  height: 90px;
+}

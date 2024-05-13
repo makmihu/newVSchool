@@ -1,0 +1,83 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    margin: 10px;
+    background-color: rgb(238, 168, 168);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-left: 120px;
+    margin-right: 120px;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
+.operation{
+    margin: 10px;
+    background-color: darkred;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    padding: 10px;
+}
+input {
+    margin: 10px;
+    background-color: aliceblue;
+    width: 40px;
+    padding: 5px;
+    height: 40px;
+    font-size: 25px;
+}
+button {
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    font-size: 22px;
+    height: 60px;
+    width: 80px;
+    margin: 10px;
+
+}
+p {
+    display: inline;
+    padding: 10px;
+    background-color: darkred;
+    color: aliceblue;
+}
+#add {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#subtract {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+#multiply {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+.solution {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin:10px;
+    margin-top: 0px;
+    margin-bottom: 12px;
+    padding: 5px;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+
+}

@@ -1,0 +1,85 @@
+.title {
+    text-align: center;
+}
+
+.main {
+    border: 3px solid black;
+    width: 50%;
+    margin: auto;
+    background-color: #FACFAF;
+}
+
+#add-item {
+    border: 3px solid black;
+    background-color: #96BBFA;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #080808;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #c589fa;
+}
+
+.label {
+    margin: 10px;
+}
+
+#list {
+    flex-direction: column;
+    display: flex;
+}
+
+#list > li{
+    list-style-type: none;
+    margin: 10px auto;
+}
+
+#list div {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.body {
+    background-color: #B2A2FA;
+}
+
+.submit {
+    background-color: #F9F6E1;
+}
+
+.edit {
+    background-color: #F9F6E1;
+}
+ 
+.x {
+    background-color: #96BBFA;
+}
+.save {
+    display: none;
+    background-color: #F9F6E1;
+}
+.editBox {
+    display: none;
+}
+
+.editing > .edit {
+    display: none;
+}
+
+.editing > .save {
+    display: inline-block;
+}
+
+.editing > .editBox{
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.editing > div{
+    display: none;
+}

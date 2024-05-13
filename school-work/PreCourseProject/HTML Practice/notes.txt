@@ -1,0 +1,5 @@
+HTML - Hypertext Markup Language
+- use symbols to define what visuals are on the screen
+TAGS <h1> </h1> - the triange brackets
+ELEMENTS h1 - the thing inside the triange brackets 
+Attributes - add more options

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>Mikkie's Private Planes</h1>
+            <h2>Airline Form</h2>
+        </header>
+
+        <form id="airline-form">
+            <div id="name-age" class="sections">
+                <input type="text" name="fName" id="fName" placeholder="First Name" required/>
+                <input type="text" name="lName" id="lName" placeholder="Last Name" required/>
+                <input type="number" name="age" id="age" placeholder="age" min="0" max="120" required/>
+            </div>
+            <div id="gen" class="sections">
+                <p class="question" id="g1">Please select your gender: </p>
+                <span id="g2">Male: </span>   
+                <input type="radio" id="g3" class="radio" name="gender" value="Male"/>
+                <span id="g4">Female: </span> 
+                <input type="radio" id="g5" class="radio" name="gender" value="Female"/>
+                <span id="g6">Other: </span>
+                <input type="radio" id="g7" class="radio" name="gender" value="other"/>
+            </div>
+            <div id="where-to" class="sections">
+                <p class="question"> Where are you traveling? Please only select one:   <p>
+                <select name="location" id="location" >
+                    <option value="Dallas/Fort Worth International">Dallas/Fort Worth International</option>
+                    <option value="Denver International">Denver International</option>
+                    <option value="Orlando International">Orlando International</option>
+                </select>   
+            </div>
+            <div id="diet" class="sections">
+            <p class="question" id="diet-question">Do you have any dietary restrictions? Select all that apply:</p>
+                <p class="diet-options">Vegitarian: </p>
+                <input type="checkbox" class="checkbox" name="vegitarian" value="Vegitarian" />
+                <p class="diet-options">Vegan: </p>
+                <input type="checkbox" class="checkbox" name="vegan" value="Vegan" />
+                <p class="diet-options">Lactoce Free: </p>
+                <input type="checkbox" class="checkbox" name="lactoce-free" value="Lactoce Free" />
+                <p class="diet-options">Food Allergies: </p>
+                <input type="checkbox" class="checkbox" name="food-allergy" value="Food Allergies" />
+
+            </div>
+            <button id="submit">Submit</button>
+        </form>
+
+        <script src="index.js"></script>
+    </body>
+</html>

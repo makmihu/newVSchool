@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css"/>
+        <title>Mario Pest Control</title>
+    </head>
+    <body>
+        <header>
+            <h1>Mario Pest Control</h1>
+        </header>
+
+        <form id="form">
+            <main>
+                <div id="goomba" class="baddies">
+                    <div class="container">
+                        <img class="image" src="https://mario.wiki.gallery/images/7/7d/SMBW_Goomba.png" />
+                    </div>
+
+                    <div class="baddies-base">
+                        <h2>Goombas</h2>
+
+                        <p class="pricing">5 Coins</p>
+
+                        <div class="quantity">
+                            <span class="how-many">Number Caught: </span>
+
+                            <input type="number" placeholder="#" id="goombas-caught" name="goombasCaught"/>
+                        </div>
+                </div>
+                </div>
+
+                <div id="bob-ombs" class="baddies">
+                    <div class="container">
+                        <img class="image" src="https://static.wikia.nocookie.net/mario/images/8/8c/Bob-omb%2C_New_Super_Mario_Bros._U.png/revision/latest?cb=20121119023919" />
+                    </div>
+
+                    <div class="baddies-base">
+                        <h2>Bob-ombs</h2>
+
+                        <p class="pricing">7 Coins</p>
+
+                        <div class="quantity">
+                            <span class="how-many">Number Caught: </span>
+
+                            <input type="number" placeholder="#" id="bob-ombs-caught" name="bobOmbsCaught"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cheep-cheeps" class="baddies">
+                    <div class="container">
+                        <img class="image" src="https://static.wikia.nocookie.net/mario/images/7/71/NSMBU_Cheep_Cheep.png/revision/latest/scale-to-width-down/1000?cb=20190808220102" />
+                    </div>
+
+                    <div class="baddies-base">
+                        <h2>Cheep-Cheeps</h2>
+
+                        <p class="pricing">11 Coins</p>
+
+                        <div class="quantity">
+                            <span class="how-many">Number Caught: </span>
+                            <input type="number" placeholder="#" id="cheep-cheeps-caught" name="cheepCheepsCaught"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="chain-chomps" class="baddies">
+                    <div class="container">
+                        <img class="image" src="https://static.wikia.nocookie.net/mario/images/a/a9/ChainChompMP8.png/revision/latest?cb=20110710113326" />
+                    </div>
+
+                    <div class="baddies-base">
+                        <h2>Chain-Chomps</h2>
+
+                        <p class="pricing">30 Coins</p>
+
+                        <div class="quantity">
+                            <span class="how-many">Number Caught: </span>
+                            <input type="number" placeholder="#" id="chain-chomps-caught" name="chainChompsCaught"/>
+                        </div>    
+                    </div>   
+                </div>
+            </main>
+
+            <aside>
+                <button id="total">Total Cost:</button>
+
+                <div id="total-box"></div>
+                <div id="total-box2">Coins</div>
+            </aside>
+        </form>
+
+        <footer>
+            <span id="email" class="footer-item">supermario@gmail.com</span>
+
+            <span id="website" class="footer-item">https://www.super-mario.com</span>
+
+            <span id="address" class="footer-item">123 North Mushroom Lane, Toad City, Mushroom Kingdom, Mushroom Planet, Grand Finale Galaxy</span>
+        </footer>
+
+        <script src="index.js"></script>
+    </body>
+</html>

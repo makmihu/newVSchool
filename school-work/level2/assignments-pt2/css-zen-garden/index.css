@@ -1,0 +1,429 @@
+/* what I need help with
+    - thinks layered on the image
+    - stretching of hte design links section
+    - how to use the font for footer 2
+    - space next to periods on footer 1
+*/
+@font-face {
+    font-family: "myFont";
+    src: url("verdemoderna.woff");
+}
+a:hover {
+    text-decoration: underline;
+}
+body {
+    border-top: rgb(24,73,76) 10px solid;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    margin: 0;
+    color: #325050;
+    background-color: #fff;
+    font-family: 'Libre Baskerville', sans-serif;    
+}
+/* Small */
+header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(110px, 1fr));
+    /* background-image: url('huntington.jpg'), url('contours-opaque.png'), url('contours.png'), url('noise.png'); */
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-image: url(contours.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
+    background-position: 0 0, 0 0, -5px -25px, 0 50%;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+}
+    
+    #mainHeader {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        text-align: center;
+        justify-content: center;
+        padding: .5%;
+        /* border: 2px dashed #17e0e0; */
+        padding-left: 10%;
+        padding-right: 10%;
+        display: flex;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    .container{
+        height: 50px;
+        display: inline-block;
+        margin: 5px;
+    } 
+    .container > img {
+        height: 50px;
+        opacity: 80%;
+    } 
+    #titlebox {
+        display: inline-block;
+        padding-left: 15px;
+    }
+    #title {
+        color: #fff;
+        display: inline-block;
+        font-weight: 100;
+        margin: 5px;
+        font-size: 30px;
+    }
+    #subtitle {
+        color: rgba(255,255,255,0.6);
+        font-style: italic;
+        margin: 5px;
+        text-align: left;
+        padding-left: 10px;
+    }
+    #designs-link {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        color: white;
+        align-items: center;
+        /* border: 2px dashed #17e0e0; */
+        display: flex;
+        text-align: center;
+        align-items: flex-end;
+        justify-content: space-between;   
+    }
+    #designs-link > :nth-child(1) {
+        background-image: url("noise.png");
+        width: 50px;
+        height: 60px;
+        padding: 10px;
+        background-color: #ffffff55; 
+       }
+    #designs-link > :nth-child(2) {
+        background-image: url("noise.png");
+        width: 90vw;
+        height: 20px;
+        padding: 30px;
+        background-color: #ffffff55;
+        opacity: 85%;
+
+    }
+    #designs-link > :nth-child(3) {
+        background-image: url("noise.png");
+        width: 50px;
+        font-family: 'verdemoderna';
+        font-size: 50px;
+        /* font-weight: bolder; */
+        height: 60px;
+        padding: 10px;
+        background-color: #ffffff55;
+        opacity: 85%;
+        font-family: "myFont";
+
+    }
+a {
+    color: #325050;
+    text-decoration: none;
+}
+#body1 {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+    #body1 > :nth-child(2){
+        display: none;
+    }
+    .bodyText {
+        font-size: 13px;
+        line-height: 2em;
+        font-family: 'Julius Sans One', sans-serif;
+        margin: 10px;
+    }
+    .bodyHeader {
+        font-size: 20px;
+        font-family: 'Julius Sans One', sans-serif;
+        margin: 10px;
+        margin-top: 40px;
+    }
+#body2 {
+    grid-column: 1 / -1; 
+    grid-row: 3 / 4;
+    background-color: rgba(138,188,159,0.5);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: url('bamboo.png');
+}
+    #body2 > :nth-child(1){
+        margin-top: 0;
+    }
+#body3 {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;  
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+    #body3 > :nth-child(1){
+        margin-top: 0;
+    }
+#aside1 {
+    background-color: rgb(237, 244, 240);
+    grid-column: 1 / -1;
+    grid-row: 7 / 8; 
+    padding: 0;
+    text-align:left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+    #aside1 > div {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10%;
+        padding-right: 10%;
+        border-bottom: rgb(217, 227, 220) 1px solid;
+    }
+    .book {
+        display: block;
+        padding: 5px 0 5px 0;
+        color: rgb(96, 116, 118);
+    }
+    .by {
+        font-size: 15px;
+        font-style: italic;
+        color: rgb(197, 206, 200);
+    }
+    .author {
+        font-size: 12px;
+    }
+#aside2 {
+    grid-column: 1 / -1;
+    grid-row: 8 / 9;
+    background-color: rgba(138,188,159,0.5);
+    padding: 0;
+    text-align:left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: url('bamboo.png');
+}
+    #aside2 > span {
+        display: block;
+        padding: 5px 0 5px 0;
+        color: rgb(96, 116, 118);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 10%;
+        padding-right: 10%;
+        border-top: rgb(160, 185, 173) 1px solid;
+        opacity: 70%;
+        height: 30px;
+    }
+
+#aside3 {
+    display: none;
+}
+#footer1 {
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-image: url(contours.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
+    background-position: 0 0, 0 0, -5px -25px, 0 50%;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+    padding-left: 9%;
+    padding-right: 9%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+    line-height: 2em;
+    font-size: 22px;
+    text-align: center;
+}
+    #footer1 > span {
+        opacity: 50%;
+        font-style: italic;
+        margin: 0;
+
+    }
+    #footer1 > a {
+        color: #fff;
+        opacity: 80%;
+        margin: 0;
+    }
+#footer2 {
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+ }
+/* Medium */
+ @media only screen and (min-width: 600px) and (max-width: 1115px){
+    #mainHeader > h1 {
+        font-size: 38px;
+    }    
+}
+
+
+/* Full Page  */
+@media only screen and (min-width: 1115px){
+    header {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+            }
+        #mainHeader {
+            grid-column: 1 / 3;
+            grid-row: 1 / -1;
+            padding-top: 60px;
+            padding-bottom: 90px;
+            padding-right: 0;
+            margin-right: 0;
+            border-top: rgb(61,107,102) transparent 5px;
+            border-bottom: rgb(61,107,102) transparent 5px;
+            justify-content: left;
+        } 
+        .container{
+            height: 130px;
+        }
+        .container > img {
+            height: 130px;
+        }
+        #titlebox {
+            padding-left: 30px;
+            padding-right: 0;
+            margin-right: 0;
+        }
+        #title {
+            font-size: 52px;
+        }
+        #subtitle {
+            font-size: 25px;
+            display: block;
+        }
+        #designs-link {
+            grid-column: 3 / 4;
+            grid-row: 1 / -1;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        #designs-link > :nth-child(1) {
+            width: 50px;
+            background: none;
+        }
+        #designs-link > :nth-child(2) {
+            width: 18vw; 
+            font-size: 18px;
+            opacity: 70%;
+        }
+        #designs-link > :nth-child(3) {
+            width: 50px;
+            opacity: 70%;
+            font-size: 45px;
+            display: flex;
+            align-items: center;
+        }
+    #body1 {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3; 
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+        #body1 > :nth-child(2){
+            display: block;
+        }
+        .bodyText {
+            font-size: 16.5px;
+        }
+        .bodyHeader {
+            font-size: 30px;
+        }
+    #body2 {
+        grid-column: 1 / 3; 
+        grid-row: 3 / 4;
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+    #body3 {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5; 
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+    #aside1 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3; 
+        padding-top: 45px;
+        padding-bottom: 150px;
+        padding-left: 90px;
+        padding-right: 30%;
+    }
+        #aside1 > div {
+            grid-column: 1 / -1;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #lastBook {
+            border-bottom: rgba(138,188,159,0.5);
+        }
+        .book {
+            font-size: 18px;
+
+        }
+        .by {
+            font-size: 16px;
+        }
+        .author {
+            font-size: 14px;        }
+    #aside2 {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+        padding-top: 170px;
+        padding-bottom: 80px;
+        padding-left: 50px;
+        padding-right: 30%;
+        justify-content: left;
+        display: flex;
+        flex-direction: column;
+    
+    }
+        #aside2 > span {
+            grid-column: 1 / -1;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 0;
+            padding-top: 18px;
+            height: 45px;
+        }
+        
+    #aside3 {
+        display: block;
+        grid-column: 3 / 4;
+        grid-row: 4 / 5; 
+        background-color: rgb(237, 244, 240);
+ 
+
+    }
+    #footer1 {
+        grid-column: 1 / -1;
+        font-size: 32px;
+        padding-top: 90px;
+        padding-bottom: 100px;
+
+    }
+    #footer2 {
+        grid-column: 1 / -1;
+    }
+}
+
+
+
+
+

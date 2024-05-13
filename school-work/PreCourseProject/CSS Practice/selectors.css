@@ -1,0 +1,26 @@
+.dark-coffee{
+    color: Brown;
+}
+.medium-coffee{
+    color: burlywood;
+}
+.light-coffee{
+    color: bisque;
+}
+
+h1,h2 {
+    color: aquamarine;
+}
+
+div.coffee {
+    background-color: aqua;
+}
+
+.parent > P {
+    background-color: blue;
+}
+
+.coffee {
+    color-scheme: brown;
+    font-style: oblique;
+}

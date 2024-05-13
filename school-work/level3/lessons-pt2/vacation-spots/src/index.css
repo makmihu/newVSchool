@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 40px 100px;
+    background-color: #E6AB77;
+}
+.page {
+    margin: 0 40px;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    height: 150px;
+    text-align: center;
+    background-color: #665A50;
+    color: #E68477;
+    font-size: 100px;
+    margin: 0;
+    padding: 40px;
+    border-radius: 20px;
+}
+.spotsList {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.spot {
+    background-color: #268082;
+    width: 220px;
+    height: 200px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+.place {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    color: #E68477;
+    margin: 0;
+}
+span {
+    font-size: 20px;
+}
+

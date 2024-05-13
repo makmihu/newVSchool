@@ -1,0 +1,205 @@
+/*phone*/
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: rgb(200, 191, 191);
+    text-align: center;
+
+}
+
+header {
+    position: static;
+    height: auto;
+    display: flex;
+    background: linear-gradient(to bottom, #517569, #95F5D5);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+header > h1{
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+    }
+header > h2{
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+#banner {
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 20px 0;
+}
+#center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+    #form {
+        display: flex;
+        flex-direction: column;
+        width: 75vw;
+        height: 60vh;
+        justify-content: space-evenly;
+        padding: 15px;
+        background-color: aliceblue;
+        border-radius: 12px;
+    }
+    #form > h1 {
+        margin: 0;
+        border-bottom: 1px solid black;
+    }
+    #form > input {
+        height: 45px;
+        border-radius: 5px;
+        border: none;
+        padding-left: 5px;
+        background: linear-gradient(to bottom, aliceblue, rgb(220, 227, 234));
+    }
+    button {
+        background: linear-gradient(to bottom, #517569, #95F5D5);
+        border-radius: 5px;
+        border: none;
+        color: aliceblue;
+        margin: 0 5px;
+    }
+    #submit-button {
+        height: 40px;    
+    }
+    #right {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    #todo-list {
+        position: relative;
+        width: 75vw;
+        height: 50vh;
+        overflow-y: scroll;
+        background: linear-gradient(to bottom, #517569, #95F5D5);
+        align-items: center;
+        border-radius: 12px;
+        margin-bottom: 100px;
+    }
+    .todoBox{
+        width: 63vw;
+        margin: 2vw;
+        margin-left: 5vw;
+        background-color: aliceblue;
+        padding: 2px 0 2px 0;
+        border-radius: 12px;
+    }
+    .todoTitle {
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: underline black;
+    }
+    .imageBox {
+        width: 55vw;
+        margin-left: 4vw;
+    }
+    .todoImg {
+        width: 100%;
+    }
+    #scroll-notice {
+        background-color: aliceblue;
+        border-radius: 12px;
+        color: crimson;
+        width: auto;
+        max-width: 300px;
+        font-size: 12px;
+        padding: 15px 10px;
+        
+    }
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #517569, #95F5D5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+    .icon {
+        height: 40px;
+        width: 40px;
+    }
+
+
+/*Tablet*/
+@media only screen and (820px < width <= 1024px){
+    #banner{
+        font-size: 50px;
+        margin: 20px;
+
+    }
+    #center {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-self: auto;
+    }
+    #form{
+        width: 35vw;
+        height: 50vh;
+    }
+    #right {
+        flex-direction: column;
+    }
+    #todo-list {
+        width: 50vw;
+        height: 50vh;
+        margin-bottom: 0;
+
+    }
+    .todoBox {
+        width: 43vw;
+        margin-left: 3vw;
+
+    }
+    .imageBox {
+        width: 35vw;
+    }
+}
+/*Desktop*/
+@media only screen and (width > 1024px) {
+    #banner{
+        font-size: 45px;
+        margin: 20px;
+
+    }
+    #center {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-self: auto;
+    }
+    #form{
+        width: 20vw;
+        height: 50vh;
+    }
+    #right {
+        flex-direction: column;
+    }
+    #todo-list {
+        width: 40vw;
+        height: 50vh;        
+        margin-bottom: 0;
+    }
+    .todoBox {
+        width: 33vw;
+        margin-left: 3vw;
+
+    }
+    .imageBox {
+        width: 25vw;
+    }
+}

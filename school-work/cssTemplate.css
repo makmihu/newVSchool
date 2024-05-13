@@ -1,0 +1,85 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: rgb(200, 191, 191);
+    text-align: center;
+}
+header {
+
+}
+main{
+
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+/*flex-direction: row (default):
+    -justify-content: left to right
+    -align-items: top to bottom
+
+ flex-direction: column :
+    -justify-content: top to bottom
+    -align-items: left to right
+*/
+
+/* grid example {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(4, 100px);
+} 
+ */
+colors1 {
+    color: #F0A3A4;
+    color: #C5A7A7;
+    color: #9B7A7A;
+    color: #704646;
+    color: #462020;
+    color: #330F0F;
+}
+
+colors2 {
+    color: #95F5D5;
+    color: #517569;
+    color: #9CB5AD;
+    color: #A08D89;
+    color: #4B2E27;
+    color: #F5A895;
+}
+
+colors3 {
+    color: #BCF0F5;
+    color: #6F9CA0;
+    color: #1B474B;
+    color: #75553E;
+    color: #B59E8D;
+    color: #F5D4BC;
+
+}
+
+colors4 {
+    color: #6BFAFF;
+    color: #78E5D5;
+    color: #268082;
+    color: #665A50;
+    color: #ab6157;
+    color: #E68477;
+    color: #E6AB77;
+    color: #ccc;
+}
+
+buisiness colors {
+    color: #b3fbeb;
+    color: #9cbab4;
+    color: #487a70;
+    color: #143b32;
+    color: #7a4c48;
+    color: #7a5e48;
+    color: #ba9f9c;
+    color: #baa99c;
+    color: #fad1b1;
+    color: #fab7b1;
+}

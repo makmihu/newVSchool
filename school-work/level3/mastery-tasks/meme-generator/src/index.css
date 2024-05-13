@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(193, 194, 194);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 5em;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+}
+.logo {
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+.logo > img {
+  height: 100%;
+}
+.logo > h1 {
+  color: aliceblue;
+  margin: 0 0 0 10px;
+}
+header > p {
+  color: aliceblue;
+  margin: 0;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 6em;
+  width: 80%;
+}
+.formInput {
+  height: 50px;
+  margin: 10px 1.5em;
+  border-radius: 5px;
+  padding-left: 1em;
+  font-size: 16px;
+}
+.topText {
+  grid-column: 1 / 2;
+}
+.bottomText {
+  grid-column: 2 / -1;
+}
+button {
+  margin: 5px 15px;
+  background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+  color: aliceblue;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+.btn {
+  height: 50px;
+  font-size: 16px;
+
+}
+.formButton {
+  grid-column: 1 / 2;
+}
+.saveButton {
+  grid-column: 2 / -1;
+}
+.meme {
+  position: relative;
+  width: 80%;
+}
+.memeImage {
+  margin: 15px 0;
+  width: 100%;
+  border-radius: 3px;
+}
+.memeText {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+.bottom {
+  bottom: 0;
+  padding: 20px;
+}
+.top {
+  top: 0;
+  padding: 20px;
+}
+.savedMemes {
+  margin: 5px 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.collectionMeme {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+.savedMemeImage {
+  max-width: 100%;
+  height: 200px;
+  border-radius: 3px;
+}
+.savedMemeText {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%; 
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+.savedBottom {
+  bottom: 0;
+  padding: .05em;
+}
+.savedTop {
+  top: 0;
+  padding: .05em;
+}
+.collectionBtns {
+  display: flex;
+  justify-content: space-evenly;
+}
+.savedBtns {
+  height: 30px;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+.editingMemeText{
+  position: absolute;
+  /* width: 80%; */
+  text-align: center;
+  left: 50%; 
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+@media only screen and (width > 1050px) {
+  main{
+    flex-direction: row;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    width: 50%;
+  }
+  .meme {
+    width: 50%;
+    padding: 1em 2em 1em 1em;
+  }
+  .savedMemes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .savedMemeImage {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 3px;
+  }
+}

@@ -1,0 +1,27 @@
+HTML,Body {
+    margin:0;
+    padding: 0;
+}
+
+li{
+    display: inline;
+}
+
+img {
+    display: block;
+    height:175px;
+    width: 175px;
+}
+
+p {
+    display: inline-block;
+    width: 45%;
+}
+
+h1 {
+    display: none;
+}
+
+a {
+    display: block;
+}
