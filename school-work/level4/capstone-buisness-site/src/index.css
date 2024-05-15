@@ -1,0 +1,246 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #222831;
+}
+html, body {
+    height:100%;
+    
+    display:flex;
+    flex-direction:column;
+}
+
+.root{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+.navbar {
+    background-color: #143b32;
+    padding: 8px 6em;
+    margin: 10px 2em;
+    position: sticky;
+    top: 15px;
+    display: flex;
+    justify-content: space-between; 
+    border-radius: 15px;
+}
+.links {
+    color: #b3fbeb;   
+    text-decoration: none;
+    font-size: 2.2em;
+}
+.header{
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-image: url(./components/images/noise.png), url(./components/images/contours.png);
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto;
+}
+.logo {
+    background-image: url(./components/images/logo.jpg);
+    background-size: cover;
+    margin-right: 20px;
+}
+.bigLogo{
+    margin-top: 10px;
+    height: 150px;
+    width: 150px;
+}
+.smallLogo{
+    height: 80px;
+    width: 80px;
+}
+.textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainHeaderText {
+    color: #fab7b1;
+    font-size: 6em;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans Regular', 'Lucida Sans',  'Geneva', Verdana, sans-serif;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 50px 0 10px;
+}
+.subHeaderText {
+    color: #fab7b1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 1.8em;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans Regular', 'Lucida Sans',  'Geneva', Verdana, sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+.productSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #393e46;
+    padding: 20px 3em;
+}
+.product {
+    background-color: #fad1b1;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin: 0 1.5em;
+    padding: 20px 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cartProduct{
+    background-color: #7a4c48;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin: 0 1.5em;
+    padding: 20px 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.productTitle {
+    background-color: #7a4c48;
+    background-image: url(./components/images/bamboo.png);
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto;
+    color: #9cbab4;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 3.5px solid #222831;
+    padding: 5px 0;
+    margin: 0;    
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Arial Black', 'Arial Narrow Bold', sans-serif;
+    font-size: 35px;
+}
+.cartProductTitle{
+    color: #9cbab4;
+    padding: 5px 0;
+    margin: 0;    
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Arial Black', 'Arial Narrow Bold', sans-serif;
+    font-size: 35px;
+}
+.productImgContainer {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 3.5px solid #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccccc;
+    margin: 10px 0;
+}
+.productImg {
+    object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
+}
+.productDescription {
+    background-color: #7a4c48;
+    background-image: url(./components/images/bamboo.png);
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto;
+    color: #9cbab4;
+    width: 100%;
+    min-height: 6.5em;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    border: 3.5px solid #222831;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+.btnContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.productBtn {
+    background-color: #143b32;
+    color: #b3fbeb;
+    border-radius: 50px;
+    padding: 5px 10px;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans Regular', 'Lucida Sans',  'Geneva', Verdana, sans-serif;
+    font-size: 20px;
+    width: 7.5em;
+}
+
+
+.emptyCart{
+    background-color: #393e46;
+    padding: 20px 0;
+    flex-grow: 1;
+}
+.emptyCartItem{
+    text-align: center;
+    color: #9cbab4;
+}
+
+.mainWithAside {
+    width: 200em;
+    background-color: #393e46;
+    border: 5px solid #ccc;
+    padding: 50px 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.aboutInfoHeader {
+    color: #487a70;
+    font-size: 2.2em;
+    font-weight: bolder;
+    margin: 0;
+}
+.aboutInfo {
+    color: #487a70;
+    font-size: 1.7em;
+    margin: 20px 0 40px 0;
+    text-align: center;
+}
+.externalLinks {
+    width: 100%;
+    color: #ba9f9c;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2em;
+    padding: 0 8em 15px 8em ;
+}
+
+.aside {
+    padding: 3em 8em;
+    border: 5px solid #ccc;
+    border-left: none;
+}
+.asideBrown {
+    background-color: #7a4c48;
+}
+.asideGreen{
+    background-color: #487a70;
+}
+.asideImg {
+    object-fit: cover;
+    width: 100%;
+    border: 5px solid #ccc;
+}
