@@ -11,13 +11,13 @@ function ContextProvider(props){
     axios.get("https://api.vschool.io/makaylamihu/thing")
       .then(response => setProductCollection(response.data))
       .catch(err => console.log(console.log(err)))
-  }, [])  
+  }, []) 
 
   return(
     <Context.Provider value={{
         productCollection,
         cartCollection,
-        setCartCollection
+        setCartCollection,
     }}>
       {props.children}
     </Context.Provider>

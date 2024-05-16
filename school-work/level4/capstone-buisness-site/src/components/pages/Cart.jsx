@@ -1,4 +1,4 @@
-import {useContext} from 'react'
+import { useContext } from 'react'
 import { Context } from '../../context'
 import Header from '../sections/Header'
 import CartProduct from '../sections/CartProduct'
@@ -28,7 +28,7 @@ export default function Cart() {
           <div className='emptyCart'>
             <h1 className='emptyCartItem'>There Are No Items In Your Cart</h1>
             <h1 className='emptyCartItem'>Return To The Home Page to browse Items</h1>
-          </div>
+          </div> 
         }
       </>
   )

@@ -1,8 +1,9 @@
 import {useContext} from "react";
 import { Context } from "../../context";
+// import { Link } from "react-router-dom";
 
 export default function CartProduct(props){
-  const [setCartCollection] = useContext(Context)
+  const {setCartCollection} = useContext(Context)
 
   function handleClick(id){
     setCartCollection(prev => prev.filter(thing => thing.id !== id));
@@ -17,9 +18,9 @@ export default function CartProduct(props){
       <h1 className='cartProductTitle'>{props.title}</h1>
 
       <div className='btnContainer'>
-        <button className='productBtn'>View</button>
+      {/* <Link to={`${props._id}`}><button className='productBtn'>View</button></Link> */}
             
-        <button className='productBtn' onClick={() => handleClick(props.id)}>Remove</button>
+        <button className='cartProductBtn' onClick={() => handleClick(props.id)}>Remove from Cart</button>
       </div>    
     </div>
     )

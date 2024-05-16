@@ -14,13 +14,13 @@ export default function About() {
 
         <main >
           <div className='mainWithAside'>      
-            <h1 className='aboutInfoHeader'>About the Business</h1>
+            <h1 className='infoHeader'>About the Business</h1>
             
-            <p className='aboutInfo'> Mikkie Makes is a small creations business mainly focused on crochet and amigurumi. Adorable plushies, keychains, flowers, dice bags, and more!</p>
+            <p className='info'> Mikkie Makes is a small creations business mainly focused on crochet and amigurumi. Adorable plushies, keychains, flowers, dice bags, and more!</p>
             
-            <h1 className='aboutInfoHeader'>About Mikkie</h1>
+            <h1 className='infoHeader'>About Mikkie</h1>
             
-            <p className='aboutInfo'> Mikkie is a 23 year old crafter. She has been creating all her life, but started crocheting in November of 2023 after getting layed off from her job. While trying to figure out where to go from there, she decided to pick up a hobby, and found a passion! </p>
+            <p className='info'> Mikkie is a 23 year old crafter. She has been creating all her life, but started crocheting in November of 2023 after getting layed off from her job. While trying to figure out where to go from there, she decided to pick up a hobby, and found a passion! </p>
 
             <div className='externalLinks'>
               <i className="fa-brands fa-tiktok">TikTok</i>

@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import { Context } from '../../context'
-import { Routes, Route, Link } from 'react-router-dom'
-import ProductPage from '../pages/ProductPage'
+import { Link } from 'react-router-dom'
 
 export default function Product(props) {
   const {setCartCollection} = useContext(Context)
@@ -10,9 +9,10 @@ export default function Product(props) {
     setCartCollection(prev => ([
         ...prev,
         {
-            id: props._id,
+            _id: props._id,
             title: props.title,
-            imgUrl: props.imgUrl
+            imgUrl: props.imgUrl,
+            description: props.description
         }
     ]))
   }
@@ -28,15 +28,11 @@ export default function Product(props) {
         <p className='productDescription'>{props.description}</p>
 
         <div className='btnContainer'>
-            <Link to={props._id}><button className='productBtn'>View</button></Link>
+            <Link to={`${props._id}`}><button className='productBtn'>View</button></Link>
             
             <button className='productBtn' onClick={handleClick}>Add to Cart</button>
         </div>    
       </div>
-
-      <Routes>
-        <Route path={props._id} element={<ProductPage props />}/>
-      </Routes>
     </>
   )
 }
