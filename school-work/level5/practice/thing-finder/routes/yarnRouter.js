@@ -2,13 +2,261 @@ const express = require('express')
 const yarnRouter = express.Router()
 const { v4: uuidv4 } = require('uuid')
 
-const yarn = [
+const yarnCollection = [
     {
-        color: "",
-        brand: "", 
-        type: "",
-    }
+        _id: uuidv4(), 
+        color: "Maroon",
+        name: "Wine",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Orange",
+        name: "Orange",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Salmon",
+        name: "Coral",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Yellow",
+        name: "Varsity Yellow",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Lime Green",
+        name: "Slime",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Forest Green",
+        name: "Varsity Green",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Teal",
+        name: "Dark Teal",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Turqoise",
+        name: "Aqua",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Light Purple",
+        name: "Lilac",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Purple",
+        name: "Soft Purple",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Dark Purple",
+        name: "Grape",
+        brand: "Big_Twist", 
+        weight: "Medium",
+        numberWeight: "4",
+        material: "100% Acrylic"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Pastel Pink",
+        name: "Barely Pink",
+        brand: "Loops&Threads",
+        collection: "Sweet Snuggles Lite",  
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Pastel Orange",
+        name: "Coral",
+        brand: "Loops&Threads",
+        collection: "Sweet Snuggles Lite",  
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Pastel Yellow",
+        name: "Winter White",
+        brand: "Loops&Threads",
+        collection: "Sweet Snuggles Lite",  
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Pastel Green",
+        name: "Barely Green",
+        brand: "Loops&Threads",
+        collection: "Sweet Snuggles Lite",  
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Forest Green",
+        name: "Petrol Blue",
+        brand: "Loops&Threads",
+        collection: "Chenille Home Slim",  
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Deep Blue",
+        name: "?",
+        brand: "Loops&Threads",
+        collection: "Chenille Home Slim",  
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Dark Blue",
+        name: "Blue Shadow",
+        brand: "Loops&Threads",
+        collection: "Chenille Home Slim",  
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Pastel Blue",
+        name: "Omphalodes",
+        brand: "Loops&Threads",
+        collection: "Sweet Snuggles Lite", 
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Pastel Purple",
+        name: "Lavender",
+        brand: "Loops&Threads",
+        collection: "Sweet Snuggles Lite", 
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "White",
+        name: "White",
+        brand: "Loops&Threads",
+        collection: "Sweet Snuggles Lite", 
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Light Grey",
+        name: "Silver",
+        brand: "Loops&Threads",
+        collection: "Sweet Snuggles Lite", 
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
+    {
+        _id: uuidv4(), 
+        color: "Black",
+        name: "Java",
+        brand: "Loops&Threads",
+        collection: "Chenille Home Slim", 
+        weight: "Super Bulky",
+        numberWeight: "6",
+        material: "100% Polyester"
+    },
 ]
+
+yarnRouter.route("/")
+  .get( (req, res) => {
+    res.send(yarnCollection)
+  })
+  .post( (req, res) => {
+    const newYarn = req.body
+    newYarn._id = uuidv4()
+    yarnCollection.push(newYarn)
+    res.send(`Added ${newYarn.color} yarn from ${newYarn.brand} to your yarns catalogue`)
+  })
+
+//get one
+yarnRouter.get("/:yarnId", (req, res) => {
+  const yarnId = req.params.yarnId
+  res.send(yarnCollection.find(yarn => yarn._id === yarnId))
+})
+
+// get by color
+yarnRouter.get('/search/color', (req, res) => {
+    //   /yarn/search/color?color=${name of color}  
+    const color = req.query.color
+    res.send(yarnCollection.filter(yarn => yarn.color === color)
+)
+})
+
+// get by brand
+yarnRouter.get('/search/brand', (req, res) => {
+    //   /yarn/search/brand?brand=${name of brand}  
+    const brand = req.query.brand
+    res.send(yarnCollection.filter(yarn => yarn.brand === brand)
+)
+})
+
 
 
 
