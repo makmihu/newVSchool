@@ -36,6 +36,10 @@ function editMovie(updates, movieId){
     .catch(err => console.log(err))
 }
 
+function handleFilter(e){
+  console.log(e.target.value)
+}
+
 useEffect(() => {
   getMovies()
 }, [])
@@ -51,6 +55,15 @@ const moviesMapped = movies.map(movie => (
   return (
     <div className='movieContainer'>
       <AddMovieForm submit={addMovie}  btnText="Add Movie"/>
+
+      <h1>Filter by Genre</h1>
+        <select onChange={handleFilter} className='filterForm'>
+          <option>- Select a Genre -</option>
+          <option value={'action'}>Action</option>
+          <option value={'fantasy'}>Fantasy</option>
+          <option value={'horror'}>Horror</option>
+        </select>
+
       { moviesMapped } 
     </div>
   )

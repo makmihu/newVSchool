@@ -77,7 +77,6 @@ input {
     height: 50px;
     display: flex;
     justify-content: center;
-
 }
 .living {
     object-fit: cover;
