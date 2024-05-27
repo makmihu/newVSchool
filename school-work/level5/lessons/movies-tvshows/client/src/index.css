@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica ;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+h1 {
+    margin: 5px;
+}
+p {
+    margin: 5px;
+}
+form {
+    border: 1px solid #333;
+    margin: 5px;
+    padding: 10px;
+}
+input {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin: 5px;
+}
+button {
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.deleteBtn {
+    background-color: firebrick;
+    color: whitesmoke;
+}
+.editBtn {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+.movieContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0 32px;
+}
+.movie {
+    border: 1px solid #333;
+    margin: 5px;
+    padding: 10px;
+}

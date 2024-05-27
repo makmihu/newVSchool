@@ -11,20 +11,30 @@ const movies = [
 
 //get all
 movieRouter.get("/", (req, res) => {
-    res.send(movies)
+    res.status(200).send(movies)
 })
 
 //get one
-movieRouter.get('/:movieId', (req, res) => {
+movieRouter.get('/:movieId', (req, res , next) => {
     const movieId = req.params.movieId
     const foundMovie = movies.find(movie => movie._id === movieId)
-    res.send(foundMovie)
+    if(!foundMovie){
+        const error = new Error(`The item with id ${movieId} was not found.`)
+        res.status(500)
+        return next(error)
+    }
+    res.status(200).send(foundMovie)
 })
 
 //get by genre
 movieRouter.get('/search/genre', (req, res) => {
     //   /movie/search/genre?genre=${name of genre}  
     const genre = req.query.genre
+    if(!genre){
+        const error = new Error("You must provide a genre")
+        res.status(500)
+        return next(error)
+    }
     const filteredMovies = movies.filter(movie => movie.genre === genre)
     res.send(filteredMovies)
 })
@@ -34,7 +44,7 @@ movieRouter.post("/", (req, res) => {
     const newMovie = req.body
     newMovie._id = uuidv4()
     movies.push(newMovie)
-    res.send(`successfully added ${newMovie.title} to the database!`)
+    res.status(201).send(newMovie)
 })
 
 //delete one
@@ -49,6 +59,6 @@ movieRouter.put("/:movieId", (req, res) => {
     const movieId = req.params.movieId
     const movieIndex = movies.findIndex(movie => movie._id === movieId)
     const updatedMovie = Object.assign(movies[movieIndex], req.body)
-    res.send(updatedMovie)
+    res.status(201).send(updatedMovie)
 })
 module.exports = movieRouter

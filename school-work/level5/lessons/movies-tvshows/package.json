@@ -1,7 +1,7 @@
 {
   "name": "request-body",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +11,8 @@
   "description": "",
   "dependencies": {
     "express": "^4.19.2",
+    "mongoose": "6.12",
+    "morgan": "^1.10.0",
     "uuid": "^9.0.1"
   }
 }

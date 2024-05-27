@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #bbaa9d;
+}
+
+form {
+    border: 1px solid #333;
+    margin: 5px;
+    padding: 10px;
+    background-color: #333;
+}
+.inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+input {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin: 5px;
+}
+.formBottom{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 0 0;
+}
+.checkboxText {
+    display: inline;
+    color: #ccc;
+    font-size: 18px;
+
+}
+
+.bountiesContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 6em;
+}
+.bounty {
+    border-radius: 10px;
+    border: 3px solid #330F0F;
+    margin: 0 15px 15px 15px;
+    padding: 10px 8em 10px 4em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.white{
+    background-color: #613e3a;
+    color: #fab7b1;
+}
+.red {
+    background-color: rgb(142, 48, 48);
+    color: #ccc;
+}
+.green {
+    background-color: rgb(44, 114, 44);
+    color: #ccc;
+}
+.bountyTop{
+    display: flex;
+    justify-content: space-between;
+}
+.bountyBottom{
+    display: flex;
+    justify-content: space-evenly;
+}
+.bountyItem{
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+}
+.bountyBox {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+.living {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+button {
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 20px; 
+  background-color: gray; 
+  color: #ccc;
+}
