@@ -4,223 +4,200 @@ const { v4: uuidv4 } = require('uuid')
 
 const yarnCollection = [
     {
-        _id: uuidv4(), 
-        color: "Maroon",
-        name: "Wine",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Maroon",
+        "name": "Wine",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Orange",
-        name: "Orange",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Orange",
+        "name": "Orange",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Salmon",
-        name: "Coral",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Salmon",
+        "name": "Coral",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Yellow",
-        name: "Varsity Yellow",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Yellow",
+        "name": "Varsity Yellow",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Lime Green",
-        name: "Slime",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Lime Green",
+        "name": "Slime",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Forest Green",
-        name: "Varsity Green",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Forest Green",
+        "name": "Varsity Green",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Teal",
-        name: "Dark Teal",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Teal",
+        "name": "Dark Teal",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Turqoise",
-        name: "Aqua",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Turqoise",
+        "name": "Aqua",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Light Purple",
-        name: "Lilac",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Light Purple",
+        "name": "Lilac",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Purple",
-        name: "Soft Purple",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Purple",
+        "name": "Soft Purple",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Dark Purple",
-        name: "Grape",
-        brand: "Big_Twist", 
-        weight: "Medium",
-        numberWeight: "4",
-        material: "100% Acrylic"
+        "color": "Dark Purple",
+        "name": "Grape",
+        "brand": "Big_Twist", 
+        "weight": "Medium",
+        "numberWeight": "4",
+        "material": "100% Acrylic"
     },
     {
-        _id: uuidv4(), 
-        color: "Pastel Pink",
-        name: "Barely Pink",
-        brand: "Loops&Threads",
-        collection: "Sweet Snuggles Lite",  
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Pastel Pink",
+        "name": "Barely Pink",
+        "brand": "Loops&Threads",
+        "brandCollection": "Sweet Snuggles Lite",  
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "Pastel Orange",
-        name: "Coral",
-        brand: "Loops&Threads",
-        collection: "Sweet Snuggles Lite",  
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Pastel Orange",
+        "name": "Coral",
+        "brand": "Loops&Threads",
+        "brandCollection": "Sweet Snuggles Lite",  
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "Pastel Yellow",
-        name: "Winter White",
-        brand: "Loops&Threads",
-        collection: "Sweet Snuggles Lite",  
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Pastel Yellow",
+        "name": "Winter White",
+        "brand": "Loops&Threads",
+        "brandCollection": "Sweet Snuggles Lite",  
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "Pastel Green",
-        name: "Barely Green",
-        brand: "Loops&Threads",
-        collection: "Sweet Snuggles Lite",  
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Pastel Green",
+        "name": "Barely Green",
+        "brand": "Loops&Threads",
+        "brandCollection": "Sweet Snuggles Lite",  
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "Forest Green",
-        name: "Petrol Blue",
-        brand: "Loops&Threads",
-        collection: "Chenille Home Slim",  
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Forest Green",
+        "name": "Petrol Blue",
+        "brand": "Loops&Threads",
+        "brandCollection": "Chenille Home Slim",  
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "Deep Blue",
-        name: "?",
-        brand: "Loops&Threads",
-        collection: "Chenille Home Slim",  
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Deep Blue",
+        "name": "?",
+        "brand": "Loops&Threads",
+        "brandCollection": "Chenille Home Slim",  
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "Dark Blue",
-        name: "Blue Shadow",
-        brand: "Loops&Threads",
-        collection: "Chenille Home Slim",  
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Dark Blue",
+        "name": "Blue Shadow",
+        "brand": "Loops&Threads",
+        "brandCollection": "Chenille Home Slim",  
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "Pastel Blue",
-        name: "Omphalodes",
-        brand: "Loops&Threads",
-        collection: "Sweet Snuggles Lite", 
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Pastel Blue",
+        "name": "Omphalodes",
+        "brand": "Loops&Threads",
+        "brandCollection": "Sweet Snuggles Lite", 
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "Pastel Purple",
-        name: "Lavender",
-        brand: "Loops&Threads",
-        collection: "Sweet Snuggles Lite", 
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Pastel Purple",
+        "name": "Lavender",
+        "brand": "Loops&Threads",
+        "brandCollection": "Sweet Snuggles Lite", 
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "White",
-        name: "White",
-        brand: "Loops&Threads",
-        collection: "Sweet Snuggles Lite", 
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "White",
+        "name": "White",
+        "brand": "Loops&Threads",
+        "brandCollection": "Sweet Snuggles Lite", 
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "Light Grey",
-        name: "Silver",
-        brand: "Loops&Threads",
-        collection: "Sweet Snuggles Lite", 
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Light Grey",
+        "name": "Silver",
+        "brand": "Loops&Threads",
+        "brandCollection": "Sweet Snuggles Lite", 
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
     {
-        _id: uuidv4(), 
-        color: "Black",
-        name: "Java",
-        brand: "Loops&Threads",
-        collection: "Chenille Home Slim", 
-        weight: "Super Bulky",
-        numberWeight: "6",
-        material: "100% Polyester"
+        "color": "Black",
+        "name": "Java",
+        "brand": "Loops&Threads",
+        "brandCollection": "Chenille Home Slim", 
+        "weight": "Super Bulky",
+        "numberWeight": "6",
+        "material": "100% Polyester"
     },
 ]
 

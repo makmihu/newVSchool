@@ -9,7 +9,7 @@ function ContextProvider(props){
 
   function getBounties(){
     axios.get('/api/bounties')
-        .then(req => setBounties(req.data))
+        .then(res => setBounties(res.data))
         .catch(err => console.log(err))
   }
 
