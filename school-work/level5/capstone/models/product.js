@@ -6,6 +6,10 @@ const productSchema = new Schema({
     type: String,
     required: true
   },
+  imgUrl: {
+    type: String,
+    required: true
+  },
   description: {
     type: String,
     required: true
@@ -18,7 +22,7 @@ const productSchema = new Schema({
     type: String,
     lowercase: true, 
     required: true,
-    enum: ['plushie', 'keychain', 'amigurumi', 'floral', 'other']
+    enum: ["", 'Plushie', 'Keychain', 'Amigurumi', 'Floral', 'Other']
   },
   size: {
     type: String,

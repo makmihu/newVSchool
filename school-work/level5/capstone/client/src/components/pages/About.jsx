@@ -6,12 +6,12 @@ export default function About(){
   return (
     <>
       <Header 
-        class={'smallLogo'}
+        class={'small'}
         header={'About Mikkie Makes'}
       />
 
-      <main>
-      <div className='mainWithAside'>      
+      <main className='mainWithAside'>
+      <div className='infoSection about'>      
             <h1 className='infoHeader'>About the Business</h1>
             
             <p className='info'> Mikkie Makes is a small creations business mainly focused on crochet and amigurumi. Adorable plushies, keychains, flowers, dice bags, and more!</p>
@@ -30,7 +30,7 @@ export default function About(){
 
           <Aside 
             img={'https://plus.unsplash.com/premium_photo-1675799745780-87b6fe5c5822?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-            color={"Brown"}
+            color={"brown"}
           />
       </main>
     </>

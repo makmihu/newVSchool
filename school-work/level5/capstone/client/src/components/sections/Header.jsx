@@ -4,9 +4,9 @@ export default function Header(props){
   return (
     <div className='header'>
       <div className={`logo ${props.class}`}></div> 
-      <div className='textBox'>
-        <h1 className='mainHeaderText'>{props.header}</h1>
-        <p className='subHeaderText'>{props.subHeader}</p>
+      <div className='headerBox'>
+        <h1 className='headerText head'>{props.header}</h1>
+        <p className='headerText sub'>{props.subHeader}</p>
       </div>
     </div>
   )

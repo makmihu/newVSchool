@@ -1,6 +1,5 @@
-import { useState, UseContext} from 'react'
+import { useState, useContext} from 'react'
 import { Context } from '../context'
-import { useContext } from 'react'
 
 export default function NewBountyForm() {
   const {addBounty} = useContext(Context)

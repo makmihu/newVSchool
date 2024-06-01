@@ -2,10 +2,9 @@ const express = require('express')
 const bountiesRouter = express.Router()
 const Bounty = require('../models/bounty')
 
-
 bountiesRouter.route('/')
 //Get All
-  .get((req, res, next) => {
+  .get(async (req, res, next) => {
     Bounty.find((err, bounties) => {
       if(err){
         res.status(500)
@@ -13,6 +12,13 @@ bountiesRouter.route('/')
       }
       return res.status(200).send(bounties)
     })
+    // try {
+    //   const bounties = await Bounty.find()
+    //   return res.status(200).send(bounties)
+    // } catch (err) {
+    //   res.status(500)
+    //   return next(err)
+    // }
   })
 //Save New
   .post((req, res, next) => {

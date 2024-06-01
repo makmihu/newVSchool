@@ -29,7 +29,7 @@ export default function App() {
         <Route path='/cart' element={<Cart />}/>    
         <Route path='/about' element={<About />}/>          
         <Route path='/:productId' element={<ProductPage />}/>        
-        <Route path='inventoryEditing' element={<Inventory />}/>
+        <Route path='/inventory' element={<Inventory />}/>
       </Routes>
     </>
   )

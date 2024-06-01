@@ -1,13 +1,13 @@
 import { useContext } from 'react'
 import { Context } from '../../context'
 import Header from '../sections/Header'
-import ProductCard from '../sections/ProductCard'
+import HomeCard from '../sections/HomeCard'
 
 export default function Home(){
   const { inventoryCollection } = useContext(Context)
 
   const productsMapped = inventoryCollection.map(info => (
-    <ProductCard 
+    <HomeCard 
       key={info._id}
       {...info}
     />
@@ -16,14 +16,15 @@ export default function Home(){
   return (
     <>
       <Header 
-        class={'bigLogo'}
+        class={'big'}
         header={'Mikkie Makes'}
         subHeader={"Crochet, Amigurumi, & More!"}
       />
-      
-      <div className='cardSection'>
-        {productsMapped}
-      </div>
+      <main>
+        <div className='cardsContainer'>
+          {productsMapped}
+        </div>
+      </main>
     </>
   )
 }
