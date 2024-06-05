@@ -1,5 +1,4 @@
 const express = require('express')
-const { default: mongoose } = require('mongoose')
 const app = express()
 require('dotenv').config()
 const morgan = require('morgan')
@@ -9,13 +8,14 @@ const { expressjwt } = require('express-jwt')
 app.use(express.json())
 app.use(morgan('dev'))
 
+mongoose.set('strictQuery', true)
 mongoose.connect(
   process.env.MONGO_URI,
   (err) => console.log('Connected to DB', err)
 )
-app.use('/auth', require('./routes/authRouter'))
-app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })) 
-
+app.use('/api/auth', require('./routes/authRouter'))
+app.use('/api/secured', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })) 
+app.use('/api/secured/issue', require('./routes/IssueRouter'))
 
 app.use((err, req, res, next) => {
     console.log(err)

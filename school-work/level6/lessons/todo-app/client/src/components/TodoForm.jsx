@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
-
+import { useState, useContext } from 'react'
+import { UserContext } from '../context/UserProvider'
 const initInputs = {
   title: "",
   description: "",
   imgUrl: ""
 }
 
-export default function TodoForm(){
+export default function TodoForm(props){
+  const {addTodo} = useContext(UserContext)
   const [inputs, setInputs] = useState(initInputs)
 
   function handleChange(e){
@@ -19,7 +20,8 @@ export default function TodoForm(){
 
   function handleSubmit(e){
     e.preventDefault()
-    // add todo
+    addTodo(inputs)
+    setInputs(initInputs)
   }
 
   const { title, description, imgUrl } = inputs

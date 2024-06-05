@@ -3,7 +3,7 @@ import axios from "axios"
 
 export const Context = createContext()
   
-function ContextProvider(props){ 
+export default function ContextProvider(props){ 
   const [inventoryCollection, setInventoryCollection] = useState([])
   const [cartCollection, setCartCollection] = useState([])
 
@@ -53,6 +53,4 @@ function ContextProvider(props){
       {props.children}
     </Context.Provider>
   )
-}
-  
-export default ContextProvider  
+} 
