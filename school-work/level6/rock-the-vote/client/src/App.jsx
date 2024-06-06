@@ -1,26 +1,37 @@
-import React from 'react'
+import { useContext } from 'react'
+import { UserContext } from './context/UserContext'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/sections/Navbar'
 import Profile from './components/pages/Profile'
 import Login from './components/pages/Login'
 import Issues from './components/pages/Issues'
+import ProtectedRoute from './components/ProtectedRoute'
 
 export default function App() {
+  const { token } = useContext(UserContext)
+
   return (
     <>
-      <Navbar />
+      {token && <Navbar />}
 
       <Routes>
         <Route 
           path='/'
-          element={<Login />}
+          element={token ? <Navigate to="/profile"/> :<Login />}
+
         />
         <Route 
           path='/profile'
-          element={<Profile />}        />
+          element={<ProtectedRoute token={token}>
+            <Profile />
+          </ProtectedRoute> }        
+        />
         <Route 
-          path='/Issues'
-          element={<Issues />}        />
+          path='/issues'
+          element={<ProtectedRoute token={token}>
+            <Issues />
+          </ProtectedRoute>}        
+        />
       </Routes>
     </>
   )

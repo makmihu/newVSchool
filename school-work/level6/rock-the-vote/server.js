@@ -25,6 +25,6 @@ app.use((err, req, res, next) => {
     return res.send({errMsg: err.message})
   })
   
-app.listen(6500, () => {
-    console.log('Server on port 6500')
+app.listen(6700, () => {
+    console.log('Server on port 6700')
 })

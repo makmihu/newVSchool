@@ -12,7 +12,7 @@ export default function LoginForm(props) {
   } = props  
   
   return (
-    <form className="loginForm" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <input 
         type="text" 
         value={username} 
@@ -30,6 +30,7 @@ export default function LoginForm(props) {
       />
 
       <button>{ btnText }</button>
+      <p style={{color: "red", paddingTop: "10px"}}>{props.errMsg}</p>
     </form>
   )
 }

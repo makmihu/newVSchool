@@ -3,7 +3,7 @@ import { UserContext } from '../../context/UserContext'
 import LoginForm from '../sections/LoginForm'
 
 export default function Login() {
-  const signupLogin = useContext(UserContext)
+  const {signup, login, errMsg, resetAuthErr} = useContext(UserContext)
   const initInputs = { username: "", password: "" }
   const [inputs, setInputs] = useState(initInputs)
   const [toggle, setToggle] = useState(false)
@@ -18,14 +18,18 @@ export default function Login() {
 
   function handleSignup(e){
     e.preventDefault()
-    //signup
+    signup(inputs)
   }
 
   function handleLogin(e){
     e.preventDefault()
-    //login
+    login(inputs)
   }
 
+  function toggleForm(){
+    setToggle(prev => !prev)
+    resetAuthErr()
+  }
 
   return (
     <main>
@@ -37,9 +41,10 @@ export default function Login() {
                 handleChange={handleChange}
                 handleSubmit={handleSignup}
                 inputs={inputs}
-                btnText="Sign up"              
+                btnText="Sign up"
+                errMsg={errMsg}              
               />
-              <p onClick={() => setToggle(prev => !prev)}>Already a Member?</p>
+              <p onClick={toggleForm}>Already a Member?</p>
             </> 
         : 
             <>
@@ -47,9 +52,10 @@ export default function Login() {
                 handleChange={handleChange}
                 handleSubmit={handleLogin}
                 inputs={inputs}
-                btnText="Login"              
+                btnText="Login"
+                errMsg={errMsg}              
               />
-              <p onClick={() => setToggle(prev => !prev)}>Need to Signup?</p>
+              <p onClick={toggleForm}>Need to Signup?</p>
             </> 
         }
       </div>
