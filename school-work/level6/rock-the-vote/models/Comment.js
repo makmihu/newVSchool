@@ -6,9 +6,6 @@ const CommentSchema = new Schema({
     type: String,
     required: true,
   },
-  likes: {
-    type: Array
-  },
   user: {
     type: Schema.Types.ObjectId,
     ref: "User",  
@@ -17,6 +14,10 @@ const CommentSchema = new Schema({
   issue: {
     type: Schema.Types.ObjectId,
     ref: "Issue",
+    required: true
+  },
+  username: {
+    type: String,
     required: true
   }
 })

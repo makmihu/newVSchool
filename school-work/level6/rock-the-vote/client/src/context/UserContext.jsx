@@ -19,7 +19,8 @@ export default function UserProvider(props){
     errMsg: ''
   }
   const [userState, setUserState] = useState(initState)
-  // const [allIssues, setAllIssues] = useState([])
+  const [allComments, setAllComments] = useState([])
+  const [allIssues, setAllIssues] = useState([])
 
   const signup = async (credentials) => {
     try {
@@ -80,8 +81,7 @@ export default function UserProvider(props){
 
   const getUserIssues = async () => {
     try {
-      const res = await userAxios.get('/api/secured/issue/user')
-      console.log(res.data)
+      const res = await userAxios.get('/api/secured/issues/user')
       setUserState(prev =>({
         ...prev,
         issues: res.data
@@ -93,7 +93,7 @@ export default function UserProvider(props){
 
   const addIssue = async (newIssue) => {
     try {
-      const res = await userAxios.post('/api/secured/issue', newIssue)
+      const res = await userAxios.post('/api/secured/issues', newIssue)
       setUserState(prev =>({
         ...prev,
         issues: [...prev.issues, res.data]
@@ -103,28 +103,48 @@ export default function UserProvider(props){
     }
   }
 
-  // const getAllIssues = async () => {
-  //   try {
-  //     const res = await userAxios.get('/api/secured/issue')
-  //     setAllIssues(res.data)    
-  //   } catch (err) {
-  //    console.log(err.response.data.errMsg)    
-  //   }
-  // }
+  const getAllIssues = async () => {
+    try {
+      const res = await userAxios.get('/api/secured/issues')
+      setAllIssues(res.data)
+    } catch (err) {
+     console.log(err)    
+    }
+  }
+  const getAllComments = async () => {
+    try {
+      const res = await userAxios.get('/api/secured/comments')
+      setAllComments(res.data) 
+    } catch (err) {
+      console.log(err)    
+    }
+  }
 
-  // useEffect(() => {
-  //   getAllIssues() 
-  // }, []) 
+  const addComment = async (newComment, issueId) => {
+    try {
+      const res = await userAxios.post(`/api/secured/comments/${issueId}`, newComment)
+      setAllComments(prev => [ ...prev, res.data])
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    getAllIssues()
+    getAllComments()
+  }, [])
 
   return(
     <UserContext.Provider value={{
       ...userState,
-      // ...allIssues,
+      allIssues,
+      allComments,
       resetAuthErr,
       signup,        
       login,
       logout,
-      addIssue
+      addIssue,
+      addComment
     }}>
       {props.children}
     </UserContext.Provider>

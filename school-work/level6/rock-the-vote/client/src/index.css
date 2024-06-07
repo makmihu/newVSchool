@@ -60,11 +60,13 @@ header {
   font-size: 3em;
   color: rgb(222, 191, 198);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+}
+.issuesHeader {
+  margin: 50px 0;
 }
 .newIssueContainer {
-  border: 3px solid #363c47;
   background-color: rgb(222, 191, 198);
+  border: 3px solid #363c47;
   margin: 20px 15em;
   display: flex;
   flex-direction: column;
@@ -83,20 +85,35 @@ form {
   margin: 20px 4em;
 }
 
-form > input,
-form > textarea {
+form > input {
   background-color: #b3bac7;
   margin-bottom: 20px;
   padding: 5px;
   font-size: 1.8em;
 }
+form > textarea {
+  background-color: #b3bac7;
+  padding: 5px;
+}
+  .issueTxtArea {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+  }
+  .commentTxtArea {
+    height:75px;
+  }
 form > button {
   background-color: #363c47;
   color: #b3bac7;
-  margin: 0 4em;
   padding: 5px;
-  font-size: 1.5em;
 }
+  .issueBtn {
+    margin: 0 4em;
+    font-size: 1.5em;
+  }
+  .commentBtn {
+    font-size: 1.2em;
+  }
 
 .issuesContainer {
   display: grid;
@@ -111,17 +128,28 @@ form > button {
   grid-column: 1 / -1;
 }
 .issue {
-  background-color: #363c47;
   margin: 0 1em 10px 1em;
   padding: 10px;
   border-radius: 15px;
-  color: #b3fbeb;
 }
+  .dark {
+    background-color: #363c47;
+    color: #b3fbeb;
+  }
+  .light {
+    background-color: hsl(346, 32%, 81%);
+    color:#363c47;
+  }
 .issue > h1 {
   font-size: 1.25em;
   padding: 10px 0;
-  border-bottom: #b3fbeb 2px solid;
 }
+  .darkBorder {
+    border-bottom: #b3fbeb 2px solid;
+  }
+  .lightBorder {
+    border-bottom: 3px solid #363c47;
+  }
 .issue > h3 {
   font-size: 1em;
   padding: 10px;
@@ -131,7 +159,5 @@ form > button {
   display: flex;
   justify-content: space-evenly;
   padding: 10px 0;
-  border-bottom: #b3fbeb 2px solid;
-
 }
 

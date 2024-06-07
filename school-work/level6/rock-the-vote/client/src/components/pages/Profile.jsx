@@ -5,11 +5,10 @@ import Issue from '../sections/Issue'
 
 export default function Profile() {
   const {issues, user: { username }} = useContext(UserContext)
-  
-  const mappedIssues = issues.map(info => <Issue {...info} key={info._id} />)
+  const mappedIssues = issues.map(info => <Issue {...info} key={info._id} theme={'dark'} />)
   return (
     <>
-      <header>Welcome {username}</header>
+      <header>Welcome #{username}</header>
 
       <NewIssueForm />
       <div className="issuesContainer">

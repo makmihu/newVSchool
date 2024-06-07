@@ -24,7 +24,7 @@ export default function NewIssueForm() {
     <div className='newIssueContainer'>
       <h1>Add Issue</h1>
       
-      <form  onSubmit={handleSubmit}>
+      <form  onSubmit={handleSubmit} className='issueForm'>
         <input 
           type="text" 
           name="title" 
@@ -32,11 +32,12 @@ export default function NewIssueForm() {
           onChange={handleChange} 
           placeholder="Title"/>
         <textarea 
+          className='issueTxtArea'
           name="description" 
           value={inputs.description} 
           onChange={handleChange} 
           placeholder="Description"/>
-        <button>Add Issue</button>
+        <button className='issueBtn'>Add Issue</button>
       </form>
     </div>
   )
