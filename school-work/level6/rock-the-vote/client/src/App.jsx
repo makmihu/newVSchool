@@ -4,7 +4,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/sections/Navbar'
 import Profile from './components/pages/Profile'
 import Login from './components/pages/Login'
-import Issues from './components/pages/Issues'
+import Issues from './components/pages/AllIssues'
 import ProtectedRoute from './components/ProtectedRoute'
 
 export default function App() {

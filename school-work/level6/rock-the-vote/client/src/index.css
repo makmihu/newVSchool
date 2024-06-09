@@ -92,16 +92,22 @@ form > input {
   font-size: 1.8em;
 }
 form > textarea {
-  background-color: #b3bac7;
   padding: 5px;
 }
-  .issueTxtArea {
+  .issueTxtarea {
+    background-color: #b3bac7;
     margin-bottom: 20px;
     font-size: 1.8em;
   }
-  .commentTxtArea {
+  .commentTxtarea {
     height:75px;
   }
+    .darkTxtarea {
+      background-color: #b3bac7;
+    }
+    .lightTxtarea {
+      background-color: rgb(230, 219, 222);
+    }
 form > button {
   background-color: #363c47;
   color: #b3bac7;
@@ -159,5 +165,24 @@ form > button {
   display: flex;
   justify-content: space-evenly;
   padding: 10px 0;
+}
+.voteBtn {
+  margin: 0 5px;
+  padding: 5px 10px 0 10px;
+  border-radius: 14px;
+}
+  .lightBtn {
+    color: rgb(230, 219, 222);
+    background-color:#363c47;
+  }
+  .darkBtn {
+    color: #363c47;
+    background-color: #b3fbeb;
+  }
+.comment {
+  margin: 2.5px;
+  padding: 2.5px;
+  border: #363c47 dashed 1px;
+  border-radius: 10px;
 }
 

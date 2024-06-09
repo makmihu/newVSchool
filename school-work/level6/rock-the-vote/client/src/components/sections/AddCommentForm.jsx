@@ -3,28 +3,34 @@ import { UserContext } from '../../context/UserContext'
 
 export default function AddCommentForm(props) {
   const { addComment } = useContext(UserContext)
-  const [commentNew, setCommentNew] = useState('') 
+
+  const [commentNew, setCommentNew] = useState({text: ""})
+
   
   function handleChange(e){
-    setCommentNew(e.target.value)
+    const {value, name} = e.target
+    setCommentNew(prevInputs => ({
+      ...prevInputs,
+      [name]: value
+    }))
   }
 
   function handleSubmit(e){
     e.preventDefault()
     addComment(commentNew, props._id)
-    setComentNew('')
+    setCommentNew({text: ""})
   }
 
   return(
     <form onSubmit={handleSubmit} className='commentForm'>
       <textarea 
-        className='commentTxtArea'
-        name='commentNew'
-        value={commentNew}
+        className={`commentTxtarea ${props.theme}Txtarea`}
+        name='text'
+        value={commentNew.text}
         onChange={handleChange}
         placeholder='Add a New Comment'
       />
-      <button className='commentBtn'>Add Comment</button>
+      <button className={`commentBtn ${props.theme}Btn`} >Add Comment</button>
     </form>
   )
 }

@@ -30,13 +30,17 @@ export default function NewIssueForm() {
           name="title" 
           value={inputs.title} 
           onChange={handleChange} 
-          placeholder="Title"/>
+          placeholder="Title"
+        />
+
         <textarea 
-          className='issueTxtArea'
+          className='issueTxtarea'
           name="description" 
           value={inputs.description} 
           onChange={handleChange} 
-          placeholder="Description"/>
+          placeholder="Description"
+        />
+
         <button className='issueBtn'>Add Issue</button>
       </form>
     </div>

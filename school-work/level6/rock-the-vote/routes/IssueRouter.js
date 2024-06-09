@@ -15,6 +15,7 @@ IssueRouter.route('/')
   .post(async (req, res, next) => {             // Add new Issue
     try {
       req.body.user = req.auth._id
+      req.body.username = req.auth.username
       const newIssue = new Issue(req.body)
       const savedIssue = await newIssue.save()
       return res.status(201).send(savedIssue)
@@ -59,5 +60,41 @@ IssueRouter.route("/:issueId",)
       return next(err)      
     }
   })
+
+IssueRouter.put('/upVote/:issueId', async (req, res, next) => { //upvote
+  try {
+    console.log(req.params.issueId)
+    const updateIssue = await Issue.findOneAndUpdate(
+      { _id: req.params.issueId },
+      {
+        $addToSet: { upvotes: req.auth._id },
+        $pull: { downvotes: req.auth._id }
+      },
+      { new: true }
+    )
+    return res.status(201).send(updateIssue)
+  } catch (err) {
+    console.log(err)
+    res.status(500)
+    return next(err)  
+  }
+})
+
+IssueRouter.put('/downVote/:issueId', async (req, res, next) => { //downvote
+  try {
+    const updateIssue = await Issue.findOneAndUpdate(
+      { _id: req.params.issueId },
+      {
+        $addToSet: { downvotes: req.auth._id },
+        $pull: { upvotes: req.auth._id }
+      },
+      { new: true }
+    )
+    return res.status(201).send(updateIssue)
+  } catch (err) {
+    res.status(500)
+    return next(err)  
+  }
+})
 
 module.exports = IssueRouter

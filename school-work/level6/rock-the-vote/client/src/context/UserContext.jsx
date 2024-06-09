@@ -14,10 +14,11 @@ userAxios.interceptors.request.use(config => {
 export default function UserProvider(props){
   const initState = {
     user: JSON.parse(localStorage.getItem("user")) || {},
-    token: localStorage.getItem("token") || '',
-    issues: [],
-    errMsg: ''
+    token: localStorage.getItem("token") || "",
+    issues: JSON.parse(localStorage.getItem("issues")) || [],
+    errMsg: ""
   }
+  
   const [userState, setUserState] = useState(initState)
   const [allComments, setAllComments] = useState([])
   const [allIssues, setAllIssues] = useState([])
@@ -85,7 +86,8 @@ export default function UserProvider(props){
       setUserState(prev =>({
         ...prev,
         issues: res.data
-      }))    
+      }))
+      localStorage.setItem('issues', JSON.stringify(res.data))    
     } catch (err) {
      console.log(err.response.data.errMsg)    
     }
@@ -128,6 +130,26 @@ export default function UserProvider(props){
       console.log(err)
     }
   }
+  
+  const upVoteIssue = async (issueId) => {
+    try {
+      console.log(issueId)
+      const res = await userAxios.put(`/api/secured/issues/upVote/${issueId}`)
+      setAllIssues(prev => prev.map(issue => issueId !== issue._id ? issue : res.data))
+      setUserState(prev => ({...prev, issues: prev.issues.map(issue => issueId !== issue._id ? issue : res.data)}))
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  const downVoteIssue = async (issueId) => {
+    try {
+      const res = await userAxios.put(`/api/secured/issues/downVote/${issueId}`)
+      setAllIssues(prev => prev.map(issue => issueId !== issue._id ? issue : res.data))
+      setUserState(prev => ({...prev, issues: prev.issues.map(issue => issueId !== issue._id ? issue : res.data)}))
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   useEffect(() => {
     getAllIssues()
@@ -139,12 +161,15 @@ export default function UserProvider(props){
       ...userState,
       allIssues,
       allComments,
+      setAllComments,
       resetAuthErr,
       signup,        
       login,
       logout,
       addIssue,
-      addComment
+      addComment,
+      upVoteIssue,
+      downVoteIssue
     }}>
       {props.children}
     </UserContext.Provider>

@@ -11,14 +11,20 @@ const IssueSchema = new Schema({
     required: true
   },
   upvotes: {
-    type: Array
+    type: Array,
+    ref: "User"
   },
   downvotes: {
-    type: Array
+    type: Array,
+    ref: "User"
   },
   user: {
     type: Schema.Types.ObjectId,
     ref: "User",  
+    required: true
+  },
+  username: {
+    type: String,
     required: true
   } 
 })

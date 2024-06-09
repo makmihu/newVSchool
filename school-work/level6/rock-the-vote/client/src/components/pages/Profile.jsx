@@ -11,11 +11,11 @@ export default function Profile() {
       <header>Welcome #{username}</header>
 
       <NewIssueForm />
+
       <div className="issuesContainer">
         <h1>Your Issues</h1>
         {mappedIssues}
       </div>
-
     </>
   )
 }
