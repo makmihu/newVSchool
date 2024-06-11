@@ -3,14 +3,13 @@ import { Context } from '../../context'
 import EditForm from './EditForm'
 
 export default function ProductCard(props){
-  const { deleteProduct, editProduct} = useContext(Context)
+  const {deleteProduct, editProduct} = useContext(Context)
   const [toggle, setToggle] = useState()
   const [inputs, setInputs] = useState(props)
 
   function handleChange(e){
     const {name, value, type, checked} = e.target 
     setInputs(prev => ({...prev, [name]: type === "checkbox" ? checked : value}))
-    console.log(inputs)
   }
 
   function handleChecked(e){
@@ -63,18 +62,18 @@ export default function ProductCard(props){
           <span>{props.size}</span>
         </div>
         
-        <div className='inputWLabel border tall'>
+        <div className='inputWLabel border '>
           <span className='inventoryItem'>Made to Order:</span>
           <span>{props.madeToOrder ? 'Yes' : 'No'}</span>
         </div>
         
         
-        {props.colorOptions > 0 && 
-          <div className='inputWLabel border'>
-            <span className='inventoryItem'>Color Options: </span>
-            <span>{props.colorOptions}</span>
-          </div>
-        }
+        
+        <div className='inputWLabel border'>
+          <span className='inventoryItem'>Color Options: </span>
+          <span>{props.colorOptions}</span>
+        </div>
+        
         
         <p>Materials</p>
         <div className='materialsList inventoryMaterials'>

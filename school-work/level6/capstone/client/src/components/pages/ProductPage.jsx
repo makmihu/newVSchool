@@ -26,15 +26,15 @@ export default function ProductPage(){
       />
 
       <main className='mainWithAside'>
-        <div className='infoSection'>    
-          <div className='productDescContainer'>
+        <div className='productDescContainer'>    
+          {/* <div className=''> */}
             <p className='info product'>{chosenProduct.description}</p>
             
-            <p className='infoHeader'>****************************</p>
+            <p className='infoNoMargin'>**************************************</p>
             
             <div className='inputWLabel'>
-              <p className='infoHeader'>Price:</p>
-              <p className='infoHeader'>${chosenProduct.price}</p>
+              <p className='infoNoMargin'>Price:</p>
+              <p className='infoNoMargin'>${chosenProduct.price}</p>
             </div>
 
             <p className='infoHeader'>Approximate Size:</p>
@@ -44,7 +44,7 @@ export default function ProductPage(){
             <div className='info materialsList'>
               {chosenProduct.materials.map(x => <span className='materialSpan' key={x}>/ {x} /</span>)}
             </div>
-          </div>
+          {/* </div> */}
 
           <button className='productBtn' onClick={handleClick}>Add to Cart</button>
         </div>

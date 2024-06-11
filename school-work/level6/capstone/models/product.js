@@ -20,10 +20,9 @@ const productSchema = new Schema({
   },
   type: {
     type: String,
-    lowercase: true, 
     required: true,
     enum: ["", 'Plushie', 'Keychain', 'Amigurumi', 'Floral', 'Other']
-  },
+  }, 
   size: {
     type: String,
     required: true

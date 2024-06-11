@@ -40,6 +40,7 @@ export default function Form(){
 
   function handleSubmit(e){
     e.preventDefault()
+    console.log(inputs)
     addProduct(inputs)
     setInputs(initInputs)
   }

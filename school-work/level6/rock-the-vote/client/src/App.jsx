@@ -18,7 +18,6 @@ export default function App() {
         <Route 
           path='/'
           element={token ? <Navigate to="/profile"/> :<Login />}
-
         />
         <Route 
           path='/profile'

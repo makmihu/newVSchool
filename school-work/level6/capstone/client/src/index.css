@@ -13,6 +13,7 @@ body{
   top: 15px;
   display: flex;
   justify-content: space-between; 
+  align-items: center;
   border-radius: 15px;
   z-index: 50;
 }
@@ -20,6 +21,9 @@ body{
   color: #b3fbeb;   
   text-decoration: none;
   font-size: 2.2em;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* header */
@@ -91,12 +95,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url(./components/images/bamboo.png);
 }
   .productCard{
     background-color: #fad1b1;
   }
   .cartCard{
     background-color: #7a4c48;
+    color: #9cbab4;
   }
   .inventoryCard {
   background-color: #fab7b1;
@@ -132,8 +138,8 @@ main {
 }
 .cardImg {
   object-fit: cover;
-  max-height: 100%;
   max-width: 100%;
+  aspect-ratio: 1 / 1;
 }
 .cardMain {
   color: #9cbab4;
@@ -223,6 +229,7 @@ main {
   .select {
     width: 8em;
   }
+
 .materialLegend {
   padding: 10px 0;
 }
@@ -264,6 +271,11 @@ button {
     font-size: 15px;
     width: 10em;
   }
+  .loginFormBtn {
+    align-self: center;
+    font-size: 2em;
+    width: 15em;
+  }
 
 /* cart */
 .emptyCart{
@@ -275,12 +287,28 @@ button {
   text-align: center;
   color: #9cbab4;
 }
-
+/* login */
+.loginContainer {
+  margin: 5em 10em 5em 10em;
+  padding: 5em 5em 2em 5em;
+  background-color:#487a70;
+  text-align: center;
+  border: #143b32 5px solid;
+  background-image: url("./components/images/bamboo.png") ;
+}
+.loginContainer > p {
+  font-size: 2em;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
 /* form */
 .formBox {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   background-color:#ba9f9c;
+  background-image: url(./components/images/noise.png);
   margin-bottom: 30px;
   padding: 5px 1em;
   border: 3px solid black;
@@ -314,17 +342,23 @@ button {
     }
 .formItem {
   background-color: #7a4c48;
-  color:#143b32;
+  color:#9cbab4;
   padding: 5px 15px;
   border-radius: 15px;
-  font-size: 20px;
 }
   .textarea {
     margin: 20px .5em;
+    font-size: 20px;
   }
   .input {
     margin: 5px .5em;
+    font-size: 20px;
   }
+  .loginInput {
+    margin: 0 1em 1em 1em;
+    font-size: 1.75em;
+    border: #143b32 3px solid;
+  } 
 .labels {
   color:#143b32;
   padding: 0;
@@ -361,6 +395,7 @@ button {
 .mainWithAside {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(1, 1fr);
 }
 .infoSection {
   border: 5px solid #ccc;
@@ -375,12 +410,14 @@ button {
     color: #487a70;
   }
 .productDescContainer {
+  grid-column: 5 / -1;
   background-color: #7a5e48;
   background-image: url(./components/images/noise.png);
   border: 5px solid #ccc;
-  padding: 2em;
-  margin-bottom: 2em;
+  padding: 2em 7em;
   color: #ccc;
+  align-items: center;
+  text-align: center;
 }
 .infoHeader {
   font-size: 2.2em;
@@ -390,6 +427,10 @@ button {
 .info {
   font-size: 1.7em;
   margin: 20px 0;
+}
+.infoNoMargin {
+  font-size: 1.7em;
+  margin: 0;
 }
 .materialSpan {
   display: inline-block;
@@ -406,19 +447,27 @@ button {
 .aside {
   padding: 50px 8em;
   border: 5px solid #ccc;
-  border-left: none;
-  grid-column: 5 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
   .brown {
     background-color: #7a4c48;
     background-image: url(./components/images/gridlines.png);
+    grid-column: 5 / -1;
+    border-left: none;
   }
   .green{
     background-color: #487a70;
     background-image: url(./components/images/gridlines-opaque.png);
+    grid-column: 1 / 5;
+    grid-row: 1 / -1;
+    border-right: none;
   }
 .asideImg {
   object-fit: cover;
   width: 100%;
+  aspect-ratio: 1 / 1;
   border: 5px solid #ccc;
 }
+

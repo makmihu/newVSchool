@@ -1,35 +1,49 @@
-import React from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { Context } from './context'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './components/pages/Home'
 import Cart from './components/pages/Cart'
 import About from './components/pages/About'
 import ProductPage from './components/pages/ProductPage'
 import Inventory from './components/pages/Inventory'
+import Login from './components/pages/Login'
+import Navbar from './components/sections/Navbar'
+import ProtectedRoute from './components/ProtectedRoute'
 
 export default function App() {
+  const {token} = useContext(Context)
 
   return (
     <>
-      <nav className='navbar'>
-        <Link className='links' to="/about">
-          About
-        </Link>
-
-        <Link className='links' to="/">
-          Home
-        </Link>
-
-        <Link className='links' to="cart" >
-          <i className="fa-solid fa-cart-shopping">Cart</i>
-        </Link>
-      </nav>
+      <Navbar />
 
       <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/cart' element={<Cart />}/>    
-        <Route path='/about' element={<About />}/>          
-        <Route path='/:productId' element={<ProductPage />}/>        
-        <Route path='/inventory' element={<Inventory />}/>
+        <Route 
+          path='/' 
+          element={<Home />}
+        />
+        <Route 
+          path='/cart' 
+          element={<Cart />}
+        />    
+        <Route 
+          path='/about' 
+          element={<About />}
+        />
+        <Route 
+          path='/login' 
+          element={<Login />}
+        />          
+        <Route 
+          path='/:productId' 
+          element={<ProductPage />}
+        />        
+        <Route 
+          path='/inventory' 
+          element={<ProtectedRoute token={token}>
+            <Inventory />
+          </ProtectedRoute>}
+        />
       </Routes>
     </>
   )

@@ -10,8 +10,6 @@ export default function Issue(props) {
   const filteredComments = allComments.filter(comment => comment.issue === _id) 
   const mappedComments = filteredComments.map(info => <Comment key={info._id} {...info} />)
   
-  console.log(props)
-
   return (
     <div className={`issue ${theme}`}>
       <h1 className={`${theme}Border`}>{title}</h1>

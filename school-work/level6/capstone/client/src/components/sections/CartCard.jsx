@@ -18,7 +18,7 @@ export default function CartCard(props){
       <h1 className='cardTitle'>{props.name}</h1>
 
       <div className='inputWLabel'>
-        <span>Price: </span>
+        <span className='inventoryItem'>Price: </span>
         <span>${props.price}</span>
       </div>
 

@@ -169,7 +169,8 @@ export default function UserProvider(props){
       addIssue,
       addComment,
       upVoteIssue,
-      downVoteIssue
+      downVoteIssue,
+      getUserIssues
     }}>
       {props.children}
     </UserContext.Provider>
