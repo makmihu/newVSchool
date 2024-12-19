@@ -53,10 +53,6 @@
         // }
     }
 
-
-
-
-
 function showData(arr){
     for(let i = 0; i < arr.length; i++){
         const h1 = document.createElement('h1')

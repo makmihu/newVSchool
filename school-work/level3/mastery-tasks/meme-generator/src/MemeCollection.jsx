@@ -16,7 +16,6 @@ function MemeCollection(props) {
             [name]: value
         }))
     }
-
     function handleSubmit(event) {
         event.preventDefault()
         props.editMeme(props.id, memeText)

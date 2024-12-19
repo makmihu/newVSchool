@@ -4,7 +4,7 @@
 var n1 = "luke"
 //toUpperCase and toLowerCase
     var uppercasedLuke = n1.toUpperCase() // "LUKE"
-    var lowercasedLuke = uppercasedLuke.toLowerCase // "luke"
+    var lowercasedLuke = uppercasedLuke.toLowerCase() // "luke"
 
 //concat
     var s = "s"

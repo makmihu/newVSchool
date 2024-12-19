@@ -11,9 +11,7 @@
     //thenable - able to do something after it comes back
 function flipCoin(){
     return new Promise((resolve, reject) => {
-        
         const randomNum = Math.floor(Math.random() * 2)
-
         if(randomNum === 0){
             resolve("HEADS")
         } else if(randomNum === 1){

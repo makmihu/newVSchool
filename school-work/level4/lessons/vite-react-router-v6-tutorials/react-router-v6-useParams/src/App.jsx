@@ -8,7 +8,6 @@ import ProductDetails from './components/ProductDetails.jsx' //Params 1
  
 export default function App() { // Step 3
     return ( // Step 4
-
         <Router> {/*Step 5*/}
 
             <nav style={{ margin: 10 }}> {/*Step 11*/}

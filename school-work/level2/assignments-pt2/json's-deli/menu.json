@@ -1,66 +1,66 @@
 {
-    "menu":[
+  "menu":[
+    {
+      "appetizers":[
         {
-            "appetizers":[
-                {
-                    "name": "salad",
-                    "ingredients": ["lettuce", "chopped carrots", "onions", "cucumbers", "celery", "mushrooms", "broccoli"],
-                    "description": "a simple salad served with your choice of dressing"
-                },
-                {
-                    "name": "soup of the day",
-                    "ingredients": ["whatever that days soup is"],
-                    "description": "freshly made soup, made special by the chef. please ask your server for more details."
-                }
-            ],
-            "cold sandwiches":[
-                {
-                    "name": "turkey sandwich",
-                    "ingredients": ["turkey", "tomato", "lettuce", "cucumbers", "mayo"],
-                    "description": "this classic is made with fresh turkey and beautifully paired with our other ingredients"
-                },
-                {
-                    "name": "pastrami sandwich",
-                    "ingredients": ["pastrami", "provolone", "tomatoes", "lettuce", "pickles", "black olives", "green peppers", "banana peppers", "yellow mustard"],
-                    "description": "our wonderful pastrami has been masterfully crafted with a wonderful array of ingredients"
-                }
-            ],
-            "hot sandwiches":[
-                {
-                    "name": "grilled chicken sandwich",
-                    "ingredients": ["grilled chicken", "tomato", "lettuce", "cucumbers", "mayo"],
-                    "description": "this classic is made with freshly grilled chicken and beautifully paired with our other ingredients"
-                },
-                {
-                    "name": "smoked turkey sandwich",
-                    "ingredients": ["smoked turkey", "provolone", "tomatoes", "lettuce", "pickles", "black olives", "green peppers", "banana peppers", "yellow mustard"],
-                    "description": "our wonderful smked turkey has been masterfully crafted with a wonderful array of ingredients"
-                }
-            ],
-            "desserts":[
-                {
-                    "name": "chocolate chip cookie",
-                    "ingredients": ["flour", "leavener", "salt", "sugar", "butter", "egg", "vanilla", "chocolate chips"],
-                    "description": "a delicious chocolate chip cookie, freshly baked"
-                },
-                {
-                    "name": "apple pie",
-                    "ingredients": ["apples", "pie crust", "sugar", "brown sugar", "flour", "cinnomon", "nutmeg", "lemon juice and zest"],
-                    "description": "freshly baked slice of apple pie. baked to perfection just for your satifaction"
-                }
-            ],
-            "drinks":[
-                {
-                    "name": "water",
-                    "ingredients": ["water"],
-                    "description": "it's just water"
-                },
-                {
-                    "name": "fountain drink",
-                    "ingredients": ["water", "soda mix"],
-                    "description": "a cup to be filled with various soda's available at our soda fountain"
-                }
-            ]
+          "name": "salad",
+          "ingredients": ["lettuce", "chopped carrots", "onions", "cucumbers", "celery", "mushrooms", "broccoli"],
+          "description": "a simple salad served with your choice of dressing"
+        },
+        {
+          "name": "soup of the day",
+          "ingredients": ["whatever that days soup is"],
+          "description": "freshly made soup, made special by the chef. please ask your server for more details."
         }
-    ]
+      ],
+      "cold sandwiches":[
+        {
+          "name": "turkey sandwich",
+          "ingredients": ["turkey", "tomato", "lettuce", "cucumbers", "mayo"],
+          "description": "this classic is made with fresh turkey and beautifully paired with our other ingredients"
+        },
+        {
+          "name": "pastrami sandwich",
+          "ingredients": ["pastrami", "provolone", "tomatoes", "lettuce", "pickles", "black olives", "green peppers", "banana peppers", "yellow mustard"],
+          "description": "our wonderful pastrami has been masterfully crafted with a wonderful array of ingredients"
+        }
+      ],
+      "hot sandwiches":[
+        {
+          "name": "grilled chicken sandwich",
+          "ingredients": ["grilled chicken", "tomato", "lettuce", "cucumbers", "mayo"],
+          "description": "this classic is made with freshly grilled chicken and beautifully paired with our other ingredients"
+        },
+        {
+          "name": "smoked turkey sandwich",
+          "ingredients": ["smoked turkey", "provolone", "tomatoes", "lettuce", "pickles", "black olives", "green peppers", "banana peppers", "yellow mustard"],
+          "description": "our wonderful smked turkey has been masterfully crafted with a wonderful array of ingredients"
+        }
+      ],
+      "desserts":[
+        {
+          "name": "chocolate chip cookie",
+          "ingredients": ["flour", "leavener", "salt", "sugar", "butter", "egg", "vanilla", "chocolate chips"],
+          "description": "a delicious chocolate chip cookie, freshly baked"
+        },
+        {
+          "name": "apple pie",
+          "ingredients": ["apples", "pie crust", "sugar", "brown sugar", "flour", "cinnomon", "nutmeg", "lemon juice and zest"],
+          "description": "freshly baked slice of apple pie. baked to perfection just for your satifaction"
+        }
+      ],
+      "drinks":[
+        {
+          "name": "water",
+          "ingredients": ["water"],
+          "description": "it's just water"
+        },
+        {
+          "name": "fountain drink",
+          "ingredients": ["water", "soda mix"],
+          "description": "a cup to be filled with various soda's available at our soda fountain"
+        }
+      ]
+    }
+  ]
 }

@@ -5,14 +5,14 @@ const ThemeContext = React.createContext()
 function ThemeContextProvider(props) {
     const [color, setColor] = React.useState("light")
     function toggleTheme(){
-        setColor(prev => prev === "light" ? "dark" : "light")
+      setColor(prev => prev === "light" ? "dark" : "light")
     }
   return (
     <ThemeContext.Provider value={{
-        color,
-        toggleTheme,
+      color,
+      toggleTheme,
     }}>
-        {props.children}
+      {props.children}
     </ThemeContext.Provider>
   )
 }

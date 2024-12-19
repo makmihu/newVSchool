@@ -7,11 +7,11 @@ h1.addEventListener(
 })
 
 //After
-const h1 = document.getElementById("clickable")
-h1.addEventListener(
+const h2 = document.getElementById("clickable")
+h2.addEventListener(
     "click", 
     () => {
-        h1.textContent = "clicked"
+        h2.textContent = "clicked"
 })
 
 //Before
@@ -22,9 +22,9 @@ const bigBirds = birds.map(function(bird){
 })
 
 //After
-const birds = ["robin", "pelican", "goose",]
+const birds2 = ["robin", "pelican", "goose",]
 
-const bigBirds = birds.map(bird => "big " + bird)
+const bigBirds2 = birds.map(bird => "big " + bird)
     //removed curlys and return because there was only one thing to return
     //called implicit return
 

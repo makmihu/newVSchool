@@ -2,7 +2,6 @@ import { useContext } from 'react'
 import { ThemeContext } from './themeContext'
 
 function Footer() {
-
   const {color} = useContext(ThemeContext)
 
   return (

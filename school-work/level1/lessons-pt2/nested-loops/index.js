@@ -17,8 +17,10 @@ var arrayofArrays = [
          */
 
 // how to log each part of each array individually
-    // for(var i = 0; i < arrayofArrays.length; i++){        this runs 3 times
-    //     for(var j = 0; i < arrayofArrays[i].length; j++){  this runs 9 times
+    // for(var i = 0; i < arrayofArrays.length; i++){   
+            //this runs 3 times
+    //     for(var j = 0; i < arrayofArrays[i].length; j++){  
+                //this runs 9 times
     //         console.log( arrayofArrays[i][j] )
     //     }
     // }

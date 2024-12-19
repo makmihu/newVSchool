@@ -17,7 +17,7 @@
     console.log(arr) // [6, 2, 3, 4, 5]
 
     var person = {
-        name: "harry"
+        name: "harry",
         age: 12
     }
 

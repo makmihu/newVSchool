@@ -58,8 +58,8 @@
 
 
 
-//DELETE 
-    // require id or some other identifyer for what you are wanting to delete
+// DELETE 
+    //requires id or some other identifyer for what you are wanting to delete
 
 // axios.delete('https://api.vschool.io/makaylamihu/todo/65f8dcda78fe452c114b4ef3')
 //     .then(response => console.log(response))

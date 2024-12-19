@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-
 function DiceBox() {
     const [numbers, setNumbers] = useState([1, 3, 6, 5, 2])
 

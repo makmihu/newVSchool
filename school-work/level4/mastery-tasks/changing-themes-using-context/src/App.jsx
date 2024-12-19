@@ -5,13 +5,12 @@ import Footer from './Footer'
 import { ThemeContextProvider } from './themeContext'
 
 function App() {
-
   return (
-      <ThemeContextProvider>
-        <Navbar />
-        <MainBody />
-        <Footer />
-      </ThemeContextProvider>
+    <ThemeContextProvider>
+      <Navbar />
+      <MainBody />
+      <Footer />
+    </ThemeContextProvider>
   )
 }
 

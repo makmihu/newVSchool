@@ -18,12 +18,9 @@
 //3) Capitalize the first letter of each name and make the rest of the characters lowercase
 
     function capitalizeNames(arr){
-
         let adjust = arr.map(function(letters){
-
             return letters.charAt(0).toUpperCase() + letters.substring(1).toLowerCase()
         })
-
        return adjust 
      }
   
